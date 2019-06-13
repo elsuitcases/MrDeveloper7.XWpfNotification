@@ -59,7 +59,7 @@ namespace XWpfNotification.SampleWPFApp
             InitializeAppNotifyIcon();
             MainWindow.Show();
 
-            if (!Cef.IsInitialized)
+            if (Cef.IsInitialized)
             {
                 #region [CEFSharp 연동 UI Notification 호출하기]
                 string urlUIPage = System.IO.Path.Combine(new System.IO.FileInfo(System.Reflection.Assembly.GetEntryAssembly().Location).DirectoryName, @"CEFSharpIntegration\XWpfNotification.html");
